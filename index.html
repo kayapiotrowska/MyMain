@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/vegas.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+
+<link href="https://fonts.googleapis.com/css?family=Arvo|Permanent+Marker|Cinzel|Roboto+Mono" rel="stylesheet">
+
+	<title>My Website</title>
+
+  </head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" >
+
+
+<div class="loader-wrapper">
+ <div class="loader">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+</div>
+
+
+<section id="home">
+<div class="overlay">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+
+				<div id="home-row">
+        <div id="home-circle-wrapper" class="wow fadeInUp" data-wow-delay="4s">
+					<h1>	KP <br> Portfolio <br> Website.</h1>
+				</div>
+			</div>
+
+
+				<p id="welcome_text" class="wow fadeInUp" data-wow-delay="5s"><br> </p>
+
+
+      </div>
+
+    </div>
+  </div>
+	</div>
+</section>
+
+<div id="about-me">
+<img src="img/girl.png" alt="Image of a girl with the laptop" >
+<div class="container">
+
+
+<div id="about-me-left-c">
+	<h1> Want to know some more?</h1>
+	<p>Catasstrophe present belly, scratch hand when stroked fall asleep upside-down, claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? poop in the plant pot for i'm going to lap some water out of my master's cup meow. Yowling nonstop the whole night human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! meow for food, then when human fills food dish, take a few bites of food and continue meowing i like fish but kitty power. Experiences short bursts of poo-phoria after going to the loo give me some of your food give me some of your food give me some of your food meh, i don't want it eat half my food and ask for more but being gorgeous with belly side up. Plop down in the middle where everybody walks then cats take over the world spill litter box, scratch at owner, destroy all furniture, especially couch see owner, run in terror. Cat is love, cat is life wack the mini furry mouse or flop over find empty spot in cupboard and sleep all day but you have cat to be kitten me right meow or pooping rainbow while flying in a toasted bread costume in space. Intently sniff hand push your water glass on the floor, or caticus cuteicus yet cuddle no cuddle cuddle love scratch scratch kitty kitty meow in empty rooms so bathe private parts with tongue then lick owner's face. Meow to be let in. </p>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+<section id="education">
+
+
+<div id="education-wrapper" >
+
+	<div class="row">
+
+<h1>	Education 	&amp; Career </h1>
+<p>Catasstrophe present belly, scratch hand when stroked fall asleep upside-down, claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? poop in the plant pot for i'm going to lap some water out of my master's cup meow. Yowling nonstop the whole night human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! meow for food, then when human fills food dish, take a few bites of food and continue meowing i like fish but kitty power.</p>
+
+<p>Catasstrophe present belly, scratch hand when stroked fall asleep upside-down, claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? poop in the plant pot for i'm going to lap some water out of my master's cup meow. Yowling nonstop the whole night human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! meow for food, then when human fills food dish, take a few bites of food and continue meowing i like fish but kitty power.</p>
+
+<p>Catasstrophe present belly, scratch hand when stroked fall asleep upside-down, claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? poop in the plant pot for i'm going to lap some water out of my master's cup meow. Yowling nonstop the whole night human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! meow for food, then when human fills food dish, take a few bites of food and continue meowing i like fish but kitty power.</p>
+
+
+</div>
+
+
+</section>
+
+<!-- Javascript  -->
+<script src="js/jquery.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/vegas.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/wow.js"></script>
+<script>
+new WOW().init();
+</script>
+
+
+<script>
+var i = 0;
+var txt = '-Welcome to my website. Enjoy your stay.';
+var speed = 200;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("welcome_text").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+<script>
+/* window.onload = typeWriter(); */
+window.onLoad = setTimeout(typeWriter, 6000);
+</script>
+
+
+</body>
+</html>
