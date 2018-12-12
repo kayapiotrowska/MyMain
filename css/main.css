@@ -1,0 +1,256 @@
+
+/*---------------------------------------
+    body
+-----------------------------------------*/
+
+body {
+    position: relative;
+}
+
+html,body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 100%;
+}
+
+.container {
+padding: 150px 0 150px 0;
+}
+
+/*---------------------------------------
+    Typography
+-----------------------------------------*/
+
+body {
+    background: #ffffff;
+    font-family: 'Roboto Mono', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+h1{
+  font-family: 'Cinzel';
+  font-size: 300%;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 50px;
+}
+
+p {
+  font-size: 100%;
+  text-align: justify;
+}
+
+/*---------------------------------------
+    Loader
+-----------------------------------------*/
+
+.loader-wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #212129;
+}
+
+.loader {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 80px;
+height: 80px;
+transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+animation: loader 2s infinite ease-in-out;
+color:blue;
+}
+
+.loader span {
+position: absolute;
+display: block;
+width: 40px;
+height: 40px;
+background-color: #a66f7e;
+animation: loaderBlock 2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+top: 0;
+left: 0;
+}
+
+.loader span:nth-child(2) {
+top: 0;
+right: 0;
+animation: loaderBlockInverse 2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(3) {
+bottom: 0;
+left: 0;
+animation: loaderBlockInverse 2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(4) {
+bottom: 0;
+right: 0;
+}
+
+@keyframes loader {
+0%, 10%, 100% {
+width: 80px;
+height: 80px;
+}
+
+65% {
+width: 150px;
+height: 150px;
+}
+}
+
+@keyframes loaderBlock {
+0%, 30% {
+transform: rotate(0);
+}
+55% {
+background-color: #fdc2c2;
+}
+100% {
+transform: rotate(90deg);
+}
+}
+
+@keyframes loaderBlockInverse {
+0%, 20% {
+transform: rotate(0);
+}
+55% {
+background-color: #f1efeb;
+}
+100% {
+transform: rotate(-90deg);
+}
+}
+
+
+/*---------------------------------------
+    Home Section
+-----------------------------------------*/
+
+#home {
+  height: 100vh;
+}
+
+#home h1 {
+  color: #D3D7DA;
+  font-family: 'Cinzel';
+  font-size: 400%;
+}
+
+#home-circle-wrapper{
+  height: 400px;
+  width: 400px;
+  border-radius: 200px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#welcome_text {
+  color: #BEC2C4;
+  font-size: 250%;
+  font-family: 'Arvo';
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#home, #home-row,  #home-circle-wrapper {
+  display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*---------------------------------------
+    About Me Section
+-----------------------------------------*/
+
+#about-me {
+
+
+  width:100%;
+  height:750px;
+  text-align: justify;
+  background-color: #BEC2C4;
+  position: relative;
+  padding: 0 0 150px 0;
+
+  padding: 0;
+  margin:0;
+
+}
+
+#about-me-left-c{
+  position: absolute;
+  display: inline-block;
+  float:left;
+  width: 50%;
+  left: 150px;
+}
+
+#about-me img {
+  height: 800px;
+  width: 600px;
+  float: right;
+  position: relative;
+  /* background-top = 30 px */
+  top: -30px;
+}
+
+#about-me h1{
+  color: black;
+}
+
+
+
+/*---------------------------------------
+    Education Section
+-----------------------------------------*/
+
+#education{
+  left:0;
+  top:0;
+  width:100%;
+  background-image: url("../img/education3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+
+#education-wrapper{
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width:40%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  padding: 150px 100px 150px 100px;
+}
