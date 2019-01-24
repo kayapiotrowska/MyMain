@@ -51,6 +51,7 @@ background-color: #F8FBFF;
 h1 {
   margin-top: 50px;
   margin-bottom: 50px;
+
 }
 
 /*---------------------------------------
@@ -65,7 +66,8 @@ body {
   }
 
 h1{
-  font-family: 'Cinzel';
+  font-family: 'Anton', sans-serif;
+  font-family: 'Special Elite', cursive;
   font-size: 300%;
   text-align: center;
   text-decoration: none;
@@ -76,6 +78,14 @@ p {
   font-size: 100%;
   text-align: justify;
   color: black;
+  font-family: 'Special Elite', cursive;
+}
+
+a {
+  font-size: 100%;
+  text-align: justify;
+  color: black;
+  font-family: 'Special Elite', cursive;
 }
 
 /*---------------------------------------
@@ -179,6 +189,7 @@ transform: rotate(-90deg);
       position: fixed;
       float: left;
       margin: 10px 20px;
+      text-decoration: none;
 }
 
 .logo:hover{
@@ -198,19 +209,19 @@ animation-iteration-count: infinite;
  height: 60px;
  width: 60px;
  border-radius: 30px;
- background-color: rgba(0, 0, 0, 0.6);
+ background-color: rgba(0, 255, 204,0.8);
  left:50%;
  display: flex;
  align-items: center;
  justify-content: center;
- border: solid 0.5px white;
+ text-decoration: none;
 }
 
 nav h1 {
- color: #D3D7DA;
- font-family: 'Cinzel';
  font-size: 100%;
  text-align: center;
+ text-decoration: none;
+ color:white;
 }
 
 nav {
@@ -266,9 +277,8 @@ nav ul li a:hover {
       cursor: pointer;
       color: #fff;
       display: none;
+      
 }
-
-
 
 
 
@@ -337,6 +347,7 @@ nav ul li a:hover {
   width: 400px;
   border-radius: 200px;
   background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 255, 204,0.8);
   left:50%;
 
   display: flex;
@@ -347,17 +358,20 @@ nav ul li a:hover {
 
 #home h1 {
   color: #D3D7DA;
-  font-family: 'Cinzel';
+  /*font-family: 'Cinzel';*/
   font-size: 400%;
   text-align: center;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  -webkit-text-stroke: 0.3px black;
+
 }
 
 #welcome_text {
   text-align: center;
-  color: #BEC2C4;
-  font-size: 250%;
-  font-family: 'Arvo';
+  color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 250%;
+  font-family: 'Satisfy', cursive;
 }
 
 
@@ -369,62 +383,90 @@ nav ul li a:hover {
   text-align: justify;
   background-color: #F8FBFF;
   position: relative;
-
 }
 
-
-#about-me img {
-  width: 400px;
-  height: 400px;
-}
-
-#about-me img:hover{
-  transition:  2s;
-  transform: rotateY(360deg);
-  width: 600px;
-  height: 600px;
-}
-
-#about-me img:not(:hover){
-  transition:  2s;
-  transform: rotateY(-360deg);
-  width: 400px;
-  height: 400px;
-}
-
-@media screen and (max-width: 576px) {
-  #about-me img {
-    width: 300px;
-    height: 300px;
-  }
-  }
-
-.row-flex {
+.vertical-align {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.content {
-  height: 100%;
-  padding: 10px;
-}
-
-#content-image {
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  align-content: space-around;
-  justify-content: center;
+  justify-content: center; /* Optional, to align inner items 
+                              horizontally inside the column */
 }
 
-.quote {
-  font-size: 150%;
-  font-family: 'Noto Serif SC', serif;
-  padding:30px;
-  border: solid 5px ;
-  margin: 20px 0;
-
+blockquote{
+  border-left:none
 }
+
+.quote-badge{
+  background-color: rgba(0, 0, 0, 0.2);   
+}
+
+.quote-box{
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: -100px;
+  border-radius: 17px;
+  background-color: rgba(0, 255, 204,0.8);
+  margin-top: 25px;
+  color:white;
+  width: 600px;
+  box-shadow: 2px 2px 2px 2px #E0E0E0;
+  
+}
+
+.quotation-mark{
+  
+  margin-top: -10px;
+  font-weight: bold;
+  font-size:100px;
+  color:white;
+  font-family: "Times New Roman", Georgia, Serif;
+  
+}
+
+.quote-text{
+  font-size: 250%;
+  margin-top: -65px;
+  font-family: 'Satisfy', cursive;
+  color:white;
+}
+
+
+/*---------------------------------------
+    Timeline Section
+-----------------------------------------*/
+#timeline{
+  left:0;
+  top:0;
+  width:100%;
+  background-image: url("../img/monstera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#timeline img{
+  width:100%;
+}
+
+.image:after {
+  content: '\A';
+  position: absolute;
+  width: 100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.4);
+}
+
+.image:hover:after {
+  background:rgba(0,0,0,0);
+}
+
 /*---------------------------------------
     Education Section
 -----------------------------------------*/
@@ -477,7 +519,7 @@ nav ul li a:hover {
 }
 
 /*---------------------------------------
-    Tecchnologies Section
+    Technologies Section
 -----------------------------------------*/
 
 #technologies .container {
@@ -543,4 +585,112 @@ top: 50px;
   padding:20px;
   background-color: #e6e6e6;
   border: solid 15px;
+}
+
+
+/*---------------------------------------
+    Projects Section
+-----------------------------------------*/
+
+#projects{
+  left:0;
+  top:0;
+  width:100%;
+  background-color: #E0E0E0;
+  position: relative;
+}
+
+
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+#content {
+  position: absolute;
+  bottom: 0px;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#myBtn {
+  position: absolute;
+  top:10px;
+  left:10px;
+  display: flex;
+  font-size: 18px;
+  padding: 10px;
+  background:black;
+  color:white; 
+  /*border: none;
+  background: #000;
+  color: #fff;
+    text-align: center;
+  align-items: center;*/
+  cursor: pointer;
+  margin:10px;
+
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: rgba(255, 255, 255, 0.5));
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: rgba(0, 255, 204,0.7);
+  cursor: pointer;
+  color:white;
+}
+
+.btn:hover {
+  background-color: rgba(0, 255, 204,1);
+  color:white;
+}
+
+.btn.active {
+  background-color:#068481;
+  color: white;
 }

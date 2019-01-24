@@ -15,13 +15,13 @@
  $(function() {
      $('body').vegas({
          slides: [
-             { src: 'img/banner1.jpg' },
-             { src: 'img/banner2.jpg' }
+             { src: 'img/banner2.jpg' },
+             { src: 'img/banner1.jpg' }
          ],
          timer: ['false'],
          transition: [ 'zoomIn'],
          animation: ['kenburns'],
-         delay: ['8000'],
+         delay: ['16000'],
      });
  });
 
