@@ -37,7 +37,7 @@ html {
 }
 
 .container {
-padding : 200px 10% ;
+padding : 50px 0% ;
 width:100%;
 background-color: #F8FBFF;
 }
@@ -49,10 +49,26 @@ background-color: #F8FBFF;
   }
 
 h1 {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
+padding:25px;
+  width:100%;
 }
+
+.row{
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle !important;
+  
+  float: none;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto !important;
+  }
 
 /*---------------------------------------
     Typography
@@ -74,8 +90,12 @@ h1{
   color: black;
 }
 
+h4{
+  font-family: 'Special Elite', cursive;
+}
+
 p {
-  font-size: 100%;
+  font-size: 18px;
   text-align: justify;
   color: black;
   font-family: 'Special Elite', cursive;
@@ -245,7 +265,7 @@ nav ul {
 }
 
 nav.black ul {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
 }
 
 nav ul li {
@@ -341,6 +361,11 @@ nav ul li a:hover {
     justify-content: center;
 }
 
+#home .row{
+  height:100px;
+  width:100%;
+}
+
 
  #home-circle-wrapper{
   height: 400px;
@@ -380,9 +405,19 @@ nav ul li a:hover {
 -----------------------------------------*/
 
 #about-me {
+  min-height:100vh;
   text-align: justify;
   background-color: #F8FBFF;
   position: relative;
+}
+
+.text-block{
+  padding:50px;
+}
+
+#about-me .col-lg-6{
+  justify-content: center;
+  text-align: center;
 }
 
 .vertical-align {
@@ -399,7 +434,8 @@ nav ul li a:hover {
 }
 
 blockquote{
-  border-left:none
+ /* border-left:none;
+  margin: 20px;*/
 }
 
 .quote-badge{
@@ -408,14 +444,15 @@ blockquote{
 
 .quote-box{
   overflow: hidden;
-  margin-top: -50px;
-  padding-top: -100px;
+  /*margin-top: 25px;
+  padding-top: -100px;*/
   border-radius: 17px;
   background-color: rgba(0, 255, 204,0.8);
-  margin-top: 25px;
   color:white;
-  width: 600px;
+  width: 80%;
   box-shadow: 2px 2px 2px 2px #E0E0E0;
+ /* top:50%;
+  left:50%;*/
   
 }
 
@@ -440,7 +477,7 @@ blockquote{
 /*---------------------------------------
     Timeline Section
 -----------------------------------------*/
-#timeline{
+#timeline-section{
   left:0;
   top:0;
   width:100%;
@@ -448,75 +485,40 @@ blockquote{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center center; 
 }
 
-#timeline img{
-  width:100%;
-}
-
-.image:after {
-  content: '\A';
-  position: absolute;
-  width: 100%; height:100%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.4);
-}
-
-.image:hover:after {
-  background:rgba(0,0,0,0);
-}
-
-/*---------------------------------------
-    Education Section
------------------------------------------*/
-
-#education{
-  left:0;
-  top:0;
-  width:100%;
-  background-image: url("../img/education3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-}
-
-
-#education-wrapper{
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width:40%;
-  background-color: rgba(255, 255, 255, 0.5);
+#timeline-section .item{
   position: relative;
-  padding: 150px 100px 150px 100px;
-}
-
-@media screen and (max-width: 1200px) {
-  #education-wrapper{
-    left: 30%;
-    width:60%;
-    padding: 150px 70px 150px 70px;
-  }
+  left: 15px;
+  top: -50px;
 }
 
 
-@media screen and (max-width: 768px) {
-  #education-wrapper{
-    left: 10%;
-    width:80%;
-    padding: 100px 50px 100px 50px;
-  }
+#timeline-section h1{
+color:white;
 }
 
-@media screen and (max-width: 576px) {
-  #education-wrapper{
-    left: 5%;
-    width:90%;
-    padding: 100px 20px 100px 20px;
-  }
+#timeline-section img{
+  width:100%;
+  border-radius: 17px;
 }
+
+#timeline-section .title{
+  background-color: rgba(0, 255, 204, 0.8) !important
+}
+
+#timeline-section .caption{
+  border-radius: 17px;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+#timeline-section .caption:hover{
+  transition-duration: 1s;
+  transform: scale(1.1);
+}
+
 
 /*---------------------------------------
     Technologies Section
@@ -529,8 +531,19 @@ blockquote{
 }
 
 #technologies .element{
-  padding: 20px;
+  padding: 30px;
 }
+
+#technologies p{
+  font-size: 100%;
+}
+
+#technologies h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
 
 .flip-card {
   background-color: transparent;
@@ -542,7 +555,12 @@ blockquote{
   align-items: center;
   align-content: space-around;
   justify-content: center;
+  border-radius: 17px;
+}
 
+.flip-card img{
+  width:300px;
+  height:300px;
 }
 
 .flip-card-inner {
@@ -553,11 +571,17 @@ blockquote{
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+  border-radius: 17px;
 }
 
 .flip-card:hover .flip-card-inner {
+  transition-duration: 1s;
   transform: rotateY(180deg);
+}
+
+.flip-card .flip-card-inner {
+  transition-duration: 1s;
+  transform: rotateY(360deg);
 }
 
 
@@ -566,12 +590,14 @@ blockquote{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 17px;
 }
 
 .flip-card-front {
   background-color: #e6e6e6;
   color: black;
   z-index: 2;
+  border-radius: 17px;
 }
 
 .flip-card-front img{
@@ -585,6 +611,7 @@ top: 50px;
   padding:20px;
   background-color: #e6e6e6;
   border: solid 15px;
+  border-radius: 17px;
 }
 
 
@@ -596,43 +623,61 @@ top: 50px;
   left:0;
   top:0;
   width:100%;
-  background-color: #E0E0E0;
+  min-height: 100%;
   position: relative;
+  background-color:   #585858;
 }
-
 
 #myVideo {
   position: relative;
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  width: 100%; 
 }
 
 #content {
   position: absolute;
   bottom: 0px;
-  /*background: rgba(0, 0, 0, 0.5);*/
   color: #f1f1f1;
   width: 100%;
-  padding: 10px;
   z-index: 1000;
+  text-align: center;
+  min-height: 100%;
+}
+
+#content h1{
+  display: inline;
+}
+
+@media (max-width: 1700px) {
+
+  #myVideo {
+      display: none;
+  }
+
+   #myBtn {
+    visibility: hidden;
+}
+
+  #content{
+    position: relative
+  }
+
+  #content h1{
+    display: inline-block;
+  }
+
 }
 
 #myBtn {
   position: absolute;
   top:10px;
-  left:10px;
+  right:10px;
   display: flex;
   font-size: 18px;
   padding: 10px;
   background:black;
   color:white; 
-  /*border: none;
-  background: #000;
-  color: #fff;
-    text-align: center;
-  align-items: center;*/
   cursor: pointer;
   margin:10px;
 
@@ -647,13 +692,11 @@ top: 50px;
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
-  padding: 8px;
+  padding: 10px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 33.33%;
   display: none; /* Hide all elements by default */
 }
 
@@ -667,7 +710,24 @@ top: 50px;
 /* Content */
 .content {
   background-color: rgba(255, 255, 255, 0.5));
-  padding: 10px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  line-height: 1.2;
+}
+
+#content p{
+font-size: 16px ;
+}
+
+.content img{
+  border-radius: 17px;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+.content img:hover{
+  transition-duration: 1s;
+  transform: scale(1.1);
 }
 
 /* The "show" class is added to the filtered elements */
@@ -675,14 +735,21 @@ top: 50px;
   display: block;
 }
 
+#myBtnContainer{
+  position: relative;
+  text-align: left
+}
+
 /* Style the buttons */
 .btn {
   border: none;
   outline: none;
-  padding: 12px 16px;
+  padding: 10px;
+  margin-left:10px;
   background-color: rgba(0, 255, 204,0.7);
   cursor: pointer;
   color:white;
+  font-family: 'Special Elite', cursive;
 }
 
 .btn:hover {
@@ -692,5 +759,47 @@ top: 50px;
 
 .btn.active {
   background-color:#068481;
+  color: white;
+}
+
+
+
+/*---------------------------------------
+    Footer
+-----------------------------------------*/
+
+footer {
+  width: 100%;
+  background-color: #313131;
+  align-content: center;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-top: 33px;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  transition: transform .5s;
+}
+
+footer p:hover {
+  text-decoration: none;
+  color: #aaa;
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2);
+  transition: all 0.5s ease-in-out 0.2s;
+}
+
+footer a:hover {
+  text-decoration: none;
   color: white;
 }

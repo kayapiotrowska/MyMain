@@ -2270,7 +2270,8 @@ body {
       border-radius: 50%;
       position: absolute;
       right: -9px;
-      top: 10px; }
+      top: 10px;
+    }
     .timeLine .row .item:after {
       content: '';
       height: 1px;
@@ -2363,7 +2364,8 @@ body {
             border-bottom: 0px solid transparent;
             border-top: 10px solid #5e0000; }
     .timeLine .row .item .textContent {
-      padding: 15px 10px; }
+      padding: 15px 10px; 
+      background-color:white}
       .timeLine .row .item .textContent p {
         text-justify: justify;
         text-align: left;
